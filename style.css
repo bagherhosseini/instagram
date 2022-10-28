@@ -26,6 +26,11 @@ body{
     background-color: #010100;
     color: #EBEBE3;
     height: 100vh;
+    user-select: none;
+}
+
+.cw{
+    color: rgb(255, 255, 255);
 }
 
 .home-div{
@@ -58,8 +63,7 @@ body{
     text-decoration: none;
 }
 
-i{
-    color: azure;
+i{  
     margin-right: 10px;
 }
 
@@ -72,21 +76,118 @@ i{
 
 .user-content{
     width: 500px;
+    border-radius: 1%;
+    height: fit-content;
+    background-color: #2f2f2f;
+    box-shadow: rgba(255, 255, 255, 0.372) 0px 1px 3px 0px, rgba(255, 255, 255, 0.412) 0px 0px 0px 1px;
 }
 
 .user{
-    background-color: aliceblue;
     width: 100%;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .user-img{
     border-radius: 50%;
     margin-left: 10px;
-    margin-right: 15px;
+    margin-right: 10px;
+}
+
+.reaction{
+    position: relative;
+    margin-left: 10px;
 }
 
 .content-img{
     margin-bottom: 10px;
+}
+
+#like-id{
+    display: none;
+}
+
+.like-id:checked ~ .like-re{
+    transition: 500ms;
+    color: red;
+}
+
+.like-id:not(:checked) ~ .like-re{
+    transition: 500ms;
+    color: rgb(255, 255, 255);
+}
+
+.like-re{
+    font-size: 20px;
+}
+
+.re:hover{
+    cursor: pointer;
+}
+
+.comment-re{
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    -o-transform:rotateY(180deg);
+   -ms-transform:rotateY(180deg);
+   font-size: 20px;
+}
+
+.share-re{
+    font-size: 20px;
+}
+
+#save-re{
+    display: none;
+}
+
+.save-re2{
+   position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+}
+
+.save-re1{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+
+.save-re:checked ~ .save-re2{
+    opacity: 1;
+    transition: 1000ms;
+}
+
+.save-re:not(:checked) ~ .save-re2{
+    opacity: 0;
+    transition: 500ms;
+}
+
+.ellipsis{
+    position: absolute;
+    right: 20px;
+    top: -8px;
+    font-size: 20px;
+}
+
+
+.description-text{
+    font-size: 14px;
+    margin-left: 14px;
+}
+
+.des-time{
+    margin-left: 14px;
+}
+
+
+.des-input{
+    width: calc(100% - 4px);
+    border: none;
+    border-top: 0.5px solid white;
+    outline: none;
+    background-color: #2f2f2f;
+    height: 30px;
 }
