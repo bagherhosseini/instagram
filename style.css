@@ -64,11 +64,16 @@ body{
     margin-bottom: 30px;
 }
 
+.logo-img:hover{
+    cursor: pointer;
+}
+
 .top-ul{
     list-style-type: none;
     overflow: hidden;
     padding: 0;
     margin-top: 30px;
+    width: 249px;
     position: fixed;
     top: 0;
 }
@@ -233,4 +238,9 @@ i{
     background-color: #2f2f2f;
     height: 30px;
     padding-left: 10px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
 }
