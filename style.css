@@ -48,6 +48,7 @@ body{
 
 .home-div{
     display: flex;
+    padding-right: 0;
 }
 
 .side-bar{
@@ -111,11 +112,14 @@ i{
 }
 
 .content{
-    width: calc(100% - 300px);
+    width: calc(100% - 250px);
     background-color:#010100;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
     justify-content: center;
     padding-top: 10px;
+    margin-bottom: 20px;
 }
 
 .user-content{
@@ -190,7 +194,7 @@ i{
    position: absolute;
     right: 0;
     top: 0;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .save-re1{
@@ -201,12 +205,12 @@ i{
 
 .save-re:checked ~ .save-re2{
     opacity: 1;
-    transition: 1000ms;
+    transition: 250ms;
 }
 
 .save-re:not(:checked) ~ .save-re2{
     opacity: 0;
-    transition: 500ms;
+    transition: 250ms;
 }
 
 .ellipsis{
