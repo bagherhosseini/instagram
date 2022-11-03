@@ -1,3 +1,7 @@
+*{
+    font-family: Arial, FontAwesome;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
@@ -38,29 +42,56 @@ body{
 }
 
 .side-bar{
-    background-color: #EBEBE3;
-    width: 300px;
-    height: 100vh;
+    background-color: #010100;
+    width: 250px;
+    height: calc(100% -100px);
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    border-right: 1px solid white;
+    padding-top:20px ;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+.logo-img{
+    margin-left: 10px;
+    margin-bottom: 30px;
 }
 
 .top-ul{
     list-style-type: none;
     overflow: hidden;
     padding: 0;
+    margin: 0;
 }
 
-.top-ul li a{
-    background-color: #010100;
-    width: 100%;
+.top-ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.side-li{
+    width: calc(100% - 10px);
+    margin: 3px;
     height: 50px;
-    margin-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 5px;
     display: flex;
     align-items: center;
     text-decoration: none;
+    color: white;
+    border: 1px solid #010100;
+}
+
+.side-li:hover{
+    border:1px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.user-img-side{
+    margin-right: 10px;
+    border-radius: 50%;
+    background: none;
 }
 
 i{  
@@ -69,6 +100,7 @@ i{
 
 .content{
     width: calc(100% - 300px);
+    background-color:#010100;
     display: flex;
     justify-content: center;
     padding-top: 10px;
@@ -109,17 +141,17 @@ i{
 }
 
 .like-id:checked ~ .like-re{
-    transition: 500ms;
+    transition: 250ms;
     color: red;
 }
 
 .like-id:not(:checked) ~ .like-re{
-    transition: 500ms;
+    transition: 250ms;
     color: rgb(255, 255, 255);
 }
 
 .like-re{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .re:hover{
@@ -131,11 +163,11 @@ i{
     -moz-transform:rotateY(180deg);
     -o-transform:rotateY(180deg);
    -ms-transform:rotateY(180deg);
-   font-size: 20px;
+   font-size: 17px;
 }
 
 .share-re{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 #save-re{
@@ -146,13 +178,13 @@ i{
    position: absolute;
     right: 0;
     top: 0;
-    font-size: 20px;
+    font-size: 17px;
 }
 
 .save-re1{
     position: absolute;
     right: 0;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .save-re:checked ~ .save-re2{
@@ -169,12 +201,15 @@ i{
     position: absolute;
     right: 20px;
     top: -8px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
+.font-15{
+    font-size: 14px;
+}
 
 .description-text{
-    font-size: 14px;
+    font-size: 12px;
     margin-left: 14px;
 }
 
@@ -184,10 +219,11 @@ i{
 
 
 .des-input{
-    width: calc(100% - 4px);
+    width: calc(100% - 12px);
     border: none;
     border-top: 0.5px solid white;
     outline: none;
     background-color: #2f2f2f;
     height: 30px;
+    padding-left: 10px;
 }
